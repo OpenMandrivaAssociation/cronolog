@@ -1,7 +1,7 @@
 Summary:	A flexible log file rotation program for Apache
 Name:		cronolog
 Version:	1.6.2
-Release:	%mkrel 4
+Release:	%mkrel 5
 License: 	Apache License
 Group:		System/Servers
 URL: 		http://cronolog.org/
@@ -56,4 +56,3 @@ install -m0755 src/zip_send_rm.sh %{buildroot}%{_sbindir}/zip_send_rm
 %attr(0755,root,root) %{_sbindir}/zip_send_rm
 %attr(0644,root,root) %{_mandir}/man1/*.1*
 %{_infodir}/cronolog*
-
