@@ -12,7 +12,6 @@ Patch0:		cronolog-jumbo-patch.txt
 Patch1:		cronolog-1.6.2-filemode.diff
 Requires(post): info-install
 Requires(preun): info-install
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 "cronolog" is a simple program that reads log messages from its input and
