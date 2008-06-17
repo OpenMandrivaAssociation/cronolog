@@ -1,7 +1,7 @@
 Summary:	A flexible log file rotation program for Apache
 Name:		cronolog
 Version:	1.6.2
-Release:	%mkrel 5
+Release:	%mkrel 6
 License: 	Apache License
 Group:		System/Servers
 URL: 		http://cronolog.org/
@@ -12,7 +12,7 @@ Patch0:		cronolog-jumbo-patch.txt
 Patch1:		cronolog-1.6.2-filemode.diff
 Requires(post): info-install
 Requires(preun): info-install
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 "cronolog" is a simple program that reads log messages from its input and
@@ -28,12 +28,12 @@ strftime library function).
 %patch1 -p0
 
 %build
-export CFLAGS="%{optflags} -DFILE_MODE=0640 -DDIR_MODE=711"
+export CFLAGS="%{optflags} -DFILE_MODE=0640 -DDIR_MODE=0711"
 %configure2_5x
 %make
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %makeinstall_std
 
@@ -46,7 +46,7 @@ install -m0755 src/zip_send_rm.sh %{buildroot}%{_sbindir}/zip_send_rm
 %_remove_install_info %name
 
 %clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
