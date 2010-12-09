@@ -1,7 +1,7 @@
 Summary:	A flexible log file rotation program for Apache
 Name:		cronolog
 Version:	1.6.2
-Release:	%mkrel 7
+Release:	%mkrel 8
 License: 	Apache License
 Group:		System/Servers
 URL: 		http://cronolog.org/
