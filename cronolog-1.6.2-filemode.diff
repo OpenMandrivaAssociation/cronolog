@@ -1,0 +1,21 @@
+
+ http://cronolog.org/mailing-list/msg00266.html
+
+--- src/cronolog.c	2006-08-13 13:10:46.000000000 +0200
++++ src/cronolog.c.oden	2006-08-13 13:12:30.000000000 +0200
+@@ -668,12 +668,12 @@
+     int ret;
+     if( use_handler !=1 )
+     {
+-        return open(ofilename, OPEN_SHARED, S_IRWXU );
++	return open(ofilename, OPEN_SHARED, FILE_MODE );
+     }
+-    ret = open(ofilename, OPEN_EXCLUSIVE, S_IRWXU );
++    ret = open(ofilename, OPEN_EXCLUSIVE, FILE_MODE );
+     if( ret < 0 )
+     {
+-        ret = open(ofilename, OPEN_SHARED, S_IRWXU );
++	ret = open(ofilename, OPEN_SHARED, FILE_MODE );
+         i_am_handler= 0;
+     }
+     else
