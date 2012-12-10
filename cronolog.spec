@@ -41,3 +41,48 @@ install -m0755 src/zip_send_rm.sh %{buildroot}%{_sbindir}/zip_send_rm
 %attr(0755,root,root) %{_sbindir}/zip_send_rm
 %attr(0644,root,root) %{_mandir}/man1/*.1*
 %{_infodir}/cronolog*
+
+
+%changelog
+* Sun Jun 03 2012 Andrey Bondrov <abondrov@mandriva.org> 1.6.2-9
++ Revision: 802133
+- Drop some legacy junk
+
+* Thu Dec 09 2010 Oden Eriksson <oeriksson@mandriva.com> 1.6.2-8mdv2011.0
++ Revision: 617440
+- the mass rebuild of 2010.0 packages
+
+* Wed Sep 02 2009 Thierry Vignaud <tv@mandriva.org> 1.6.2-7mdv2010.0
++ Revision: 425295
+- rebuild
+
+* Tue Jun 17 2008 Oden Eriksson <oeriksson@mandriva.com> 1.6.2-6mdv2009.0
++ Revision: 222106
+- fix dir mode (thanks Andre Nathan)
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Fri Sep 07 2007 Oden Eriksson <oeriksson@mandriva.com> 1.6.2-5mdv2008.0
++ Revision: 81838
+- rebuild
+
+
+* Sun Aug 13 2006 Oden Eriksson <oeriksson@mandriva.com> 1.6.2-4mdv2007.0
+- use tighter attribs
+- fix url
+- added one more patch
+
+* Mon Mar 13 2006 Oden Eriksson <oeriksson@mandriva.com> 1.6.2-3mdk
+- added the official "jumbo" patch (P0)
+
+* Sun Jan 08 2006 Oden Eriksson <oeriksson@mandriva.com> 1.6.2-2mdk
+- rebuild
+
+* Mon Dec 06 2004 Oden Eriksson <oeriksson@mandrakesoft.com> 1.6.2-1mdk
+- inital mandrake package
+- used parts of the provided spec file
+
