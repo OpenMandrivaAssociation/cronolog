@@ -4,7 +4,7 @@ Version:	1.6.2
 Release:	10
 License: 	Apache License
 Group:		System/Servers
-URL: 		http://cronolog.org/
+URL: 		https://cronolog.org/
 Source0:	http://cronolog.org/download/%{name}-%{version}.tar.bz2
 # http://cronolog.org/patches/cronolog-jumbo-patch.txt
 Patch0:		cronolog-jumbo-patch.txt
