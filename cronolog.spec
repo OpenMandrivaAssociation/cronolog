@@ -11,6 +11,11 @@ Patch0:		cronolog-jumbo-patch.txt
 # http://cronolog.org/mailing-list/msg00266.html
 Patch1:		cronolog-1.6.2-filemode.diff
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 "cronolog" is a simple program that reads log messages from its input and
 writes them to a set of output files, the names of which are constructed using
